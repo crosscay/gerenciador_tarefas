@@ -29,7 +29,7 @@ dotnet ef database update
 ```
 
 2. **Depois, levantar a API REST:**
-
+```bash
 dotnet build
 dotnet run
 ```
