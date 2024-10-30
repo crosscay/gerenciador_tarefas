@@ -8,17 +8,13 @@ using TaskManager.Api.Services.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // Configura o contexto do banco de dados.
 builder.Services.AddDbContext<TaskManagerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configuração do AutoMapper
-builder.Services.AddAutoMapper(typeof(Program));
+// builder.Services.AddAutoMapper(typeof(Program));
 
 // Injeção de dependências para os repositórios
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
@@ -43,8 +39,8 @@ builder.Services.AddCors(options =>
 // Configuração do AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile)); // Aquí registra el perfil de mapeo
 
-
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -64,6 +60,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
         c.RoutePrefix = "swagger"; // Estabelecer a rota base para a UI do Swagger.
     });
 }
+
 
 // Configure o pipeline de solicitações HTTP
 if (app.Environment.IsDevelopment())

@@ -18,7 +18,6 @@ namespace TaskManager.Api.DTOs
 
 
         [Required(ErrorMessage = "O estado da tarefa é obrigatório")]
-        [StringLength(50, ErrorMessage = "O estado não pode ter mais de 50 caracteres.")]
         public Enums.TaskStatus Status { get; set; }    // Estado da tarefa (pendente, em progresso, concluída).
 
         

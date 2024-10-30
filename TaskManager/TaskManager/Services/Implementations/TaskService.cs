@@ -44,7 +44,7 @@ namespace TaskManager.Api.Services.Implementations
             return taskEntity.Id;
         }
 
-        public async Task UpdateTaskAsync(Guid id, TaskDTO taskDto)
+        public async Task UpdateTaskAsync(Guid id, CreateTaskDTO taskDto)
         {
             var taskEntity = await _taskRepository.GetByIdAsync(id);
             if (taskEntity == null) return;

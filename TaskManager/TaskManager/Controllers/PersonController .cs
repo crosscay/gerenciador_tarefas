@@ -67,13 +67,13 @@ namespace TaskManager.Api.Controllers
         /// Atualiza os dados de uma pessoa existente.
         /// </summary>
         /// <param name="id">ID da pessoa a ser atualizada.</param>
-        /// <param name="personDto">Os novos dados da pessoa.</param>
+        /// <param name="CreatePersonDTO">Os novos dados da pessoa.</param>
         /// <returns>Status da operação.</returns>
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Atualiza os dados de uma pessoa existente")]
         [SwaggerResponse(204, "Pessoa atualizada com sucesso.")]
         [SwaggerResponse(400, "Dados inválidos.")]
-        public async Task<IActionResult> Put(Guid id, [FromBody] PersonDTO personDto)
+        public async Task<IActionResult> Put(Guid id, [FromBody] CreatePersonDTO personDto)
         {
             try
             {

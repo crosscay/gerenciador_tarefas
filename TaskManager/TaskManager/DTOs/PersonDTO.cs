@@ -18,6 +18,10 @@ namespace TaskManager.Api.DTOs
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
+
+        // Agregar el campo Status
+        [Required(ErrorMessage = "El estado es obligatorio.")]
+        public Enums.PersonStatus Status { get; set; } // Asegúrate de que esto esté en el espacio de nombres correctos
     }
     
     public class PersonDTO
@@ -26,5 +30,7 @@ namespace TaskManager.Api.DTOs
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime DateOfBirth { get; set; } 
+
+        public Enums.PersonStatus Status { get; set; }
     }
 }

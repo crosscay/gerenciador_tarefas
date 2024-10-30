@@ -10,7 +10,7 @@ namespace TaskManager.Api.Models
 
         public DateTime CreatedAt { get; set; }
         
-        public string Status { get; set; }
+        public Enums.TaskStatus Status { get; set; }
         
         public Guid PersonId { get; set; }
         public bool IsCompleted { get; set; }

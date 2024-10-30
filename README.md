@@ -12,7 +12,7 @@ Este projeto é um sistema de gerenciamento de tarefas desenvolvido em C# usando
 
 ### Clonando o Repositório
 ```bash
-git clone <https://github.com/crosscay/gerenciador_tarefas.git>
+git clone https://github.com/crosscay/gerenciador_tarefas.git
 cd gerenciador_tarefas
 ```
 

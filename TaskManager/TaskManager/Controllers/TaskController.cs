@@ -85,7 +85,7 @@ namespace TaskManager.Api.Controllers
         [SwaggerResponse(204, "Tarefa atualizada com sucesso.")]
         [SwaggerResponse(400, "Dados inválidos.")]
         [SwaggerResponse(404, "Tarefa não encontrada.")]
-        public async Task<ActionResult> UpdateTask(Guid id, TaskDTO taskDto)
+        public async Task<ActionResult> UpdateTask(Guid id, CreateTaskDTO taskDto)
         {
             await _taskService.UpdateTaskAsync(id, taskDto);
             return NoContent();

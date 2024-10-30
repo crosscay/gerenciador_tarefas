@@ -43,7 +43,7 @@ namespace TaskManager.Api.Services.Implementations
             return person.Id;
         }
 
-        public async Task UpdatePersonAsync(Guid id, PersonDTO personDto)
+        public async Task UpdatePersonAsync(Guid id, CreatePersonDTO personDto)
         {
             var person = await _personRepository.GetByIdAsync(id);
             if (person == null) throw new Exception("Pessoa não encontrada.");
