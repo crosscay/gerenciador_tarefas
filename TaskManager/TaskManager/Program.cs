@@ -53,13 +53,15 @@ var app = builder.Build();
 // No método Configure (se você usar .NET Core 3.1 ou 5)
 app.UseCors("AllowAnyOrigin");
 
+
+// Configuração do Swagger em ambientes de desenvolvimento e produção
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-        c.RoutePrefix = "swagger";
+        c.RoutePrefix = "swagger"; // Estabelecer a rota base para a UI do Swagger.
     });
 }
 
