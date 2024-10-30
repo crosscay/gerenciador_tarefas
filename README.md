@@ -18,10 +18,10 @@ Para construir e executar a aplicação, siga os passos abaixo:
     dotnet build
     dotnet run
 
-3. **Acceder a Swagger para probar los endpoints.:**
+3. **Acessar o Swagger para testar os endpoints.:**
 
     http://localhost:5086
-    
+
     https://localhost:7022
 
 
